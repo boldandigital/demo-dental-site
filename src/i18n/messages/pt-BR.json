@@ -1,25 +1,32 @@
 {
   "nav": {
     "home": "Início",
-    "about": "Sobre",
-    "contact": "Contato"
+    "services": "Serviços",
+    "team": "Equipe",
+    "book": "Agendar"
   },
   "home": {
-    "hero": "Demo hero aqui",
-    "tagline": "Esqueleto de narrativa de scroll — base neutra para demos verticais."
+    "hero": "Lorem ipsum dolor sit amet",
+    "tagline": "Texto de placeholder do hero — substitua pela copy de posicionamento real em uma etapa posterior."
   },
-  "about": {
-    "title": "Sobre",
-    "body": "Página sobre provisória. Faça fork deste esqueleto para construir uma história vertical específica."
+  "services": {
+    "title": "Serviços",
+    "subtitle": "Três cards de serviço placeholder. Substitua títulos e textos por serviços reais depois."
   },
-  "contact": {
-    "title": "Contato",
-    "body": "Página de contato provisória.",
-    "whatsapp": "Conversar no WhatsApp"
+  "team": {
+    "title": "Equipe",
+    "subtitle": "Dois cards de perfil placeholder. Substitua por profissionais, fotos e biografias reais."
+  },
+  "book": {
+    "title": "Agendar consulta",
+    "subtitle": "Página de agendamento stub. Integre um widget real (Doctoralia, Calendly, custom) depois."
+  },
+  "cta": {
+    "book": "Agendar agora"
   },
   "footer": {
     "mark": "Bold & Digital",
-    "tagline": "Demos de narrativa de scroll."
+    "tagline": "Demo Dental — Sorridere Clinic scaffold."
   },
   "locale": {
     "switcher": "Idioma",

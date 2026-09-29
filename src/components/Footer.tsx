@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, getPathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
-import { getPathname } from "@/i18n/navigation";
 
 /**
  * Footer — minimal footer with B&D mark + language switcher.
@@ -18,7 +17,7 @@ export function Footer() {
           <p className="text-sm font-semibold tracking-tight text-foreground">
             {t("mark")}
           </p>
-          <p className="mt-1 text-xs text-muted">{t("tagline")}</p>
+          <p className="mt-1 text-xs text-muted-foreground">{t("tagline")}</p>
         </div>
 
         <ul className="flex items-center gap-3">
@@ -26,7 +25,7 @@ export function Footer() {
             <li key={loc}>
               <Link
                 href={getPathname({ locale: loc, href: "/" })}
-                className="rounded-md border border-border px-2 py-1 text-xs uppercase text-muted transition-colors hover:text-foreground"
+                className="rounded-md border border-border px-2 py-1 text-xs uppercase text-muted-foreground transition-colors hover:text-foreground"
                 aria-label={tl(loc)}
               >
                 {loc}

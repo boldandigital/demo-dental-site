@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,13 +8,19 @@ const inter = Inter({
   display: "swap",
 });
 
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "scroll-shared",
+  title: "Sorridere Clinic",
   description:
-    "Bold & Digital scroll narrative skeleton — neutral base for vertical demos.",
+    "Sorridere Clinic — placeholder copy for the Bold & Digital dental demo.",
 };
 
-// Root layout renders the html/body shell + Inter font.
+// Root layout renders the html/body shell + Inter (body) and Fraunces (display).
 // Locale-aware providers (NextIntlClientProvider, Nav, Footer,
 // SmoothScrollProvider, WhatsAppButton) live under [locale]/layout.tsx
 // so they can use the locale param to fetch messages and key the UI.
@@ -24,7 +30,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${fraunces.variable} h-full antialiased`}
+    >
       <head>
         {/* Inline theme init — runs before paint so we don't flash on reload */}
         <script

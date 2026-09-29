@@ -1,6 +1,6 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
-import { SectionReveal } from "@/components/SectionReveal";
 import { MagneticButton } from "@/components/MagneticButton";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -10,36 +10,29 @@ export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("home");
+  const tc = await getTranslations("cta");
 
   return (
     <section className="relative flex min-h-[100svh] flex-col items-center justify-center px-6 text-center">
-      <SectionReveal>
-        <p className="text-xs uppercase tracking-[0.25em] text-muted">
-          scroll-shared · {locale}
-        </p>
-      </SectionReveal>
+      <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
+        Demo Dental · {locale}
+      </p>
 
-      <SectionReveal delay={0.1}>
-        <h1 className="mt-4 text-4xl font-semibold tracking-tight text-foreground sm:text-6xl">
-          {t("hero")}
-        </h1>
-      </SectionReveal>
+      <h1 className="font-display mt-6 text-5xl font-semibold tracking-tight text-foreground sm:text-7xl">
+        {t("hero")}
+      </h1>
 
-      <SectionReveal delay={0.2}>
-        <p className="mt-6 max-w-xl text-base text-muted sm:text-lg">
-          {t("tagline")}
-        </p>
-      </SectionReveal>
+      <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
+        {t("tagline")}
+      </p>
 
-      <SectionReveal delay={0.3}>
-        <div className="mt-10">
-          <MagneticButton
-            className="rounded-full border border-foreground bg-foreground px-6 py-3 text-sm font-medium text-background transition-colors hover:bg-transparent hover:text-foreground"
-          >
-            CTA placeholder
+      <div className="mt-12">
+        <Link href="/book">
+          <MagneticButton className="rounded-full bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90">
+            {tc("book")}
           </MagneticButton>
-        </div>
-      </SectionReveal>
+        </Link>
+      </div>
     </section>
   );
 }

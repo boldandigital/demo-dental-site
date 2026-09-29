@@ -1,25 +1,32 @@
 {
   "nav": {
     "home": "Home",
-    "about": "Over ons",
-    "contact": "Contact"
+    "services": "Diensten",
+    "team": "Team",
+    "book": "Boeken"
   },
   "home": {
-    "hero": "Demo hero komt hier",
-    "tagline": "Scroll-verhaal skelet — neutrale basis voor verticale demos."
+    "hero": "Lorem ipsum dolor sit amet",
+    "tagline": "Placeholder-ondertitel voor de hero — vervang door echte positioneringstekst in een latere stap."
   },
-  "about": {
-    "title": "Over ons",
-    "body": "Placeholder over-ons pagina. Fork dit skelet om een verticaal-specifiek verhaal te bouwen."
+  "services": {
+    "title": "Diensten",
+    "subtitle": "Drie placeholder-diensten. Vervang titels + teksten later door echte behandelingen."
   },
-  "contact": {
-    "title": "Contact",
-    "body": "Placeholder contactpagina.",
-    "whatsapp": "Chat op WhatsApp"
+  "team": {
+    "title": "Team",
+    "subtitle": "Twee placeholder-profielkaarten. Vervang door echte behandelaars, foto's en biografieën."
+  },
+  "book": {
+    "title": "Afspraak maken",
+    "subtitle": "Stub-boekingspagina. Koppel een echte kalenderwidget (Doctoralia, Calendly, custom) later."
+  },
+  "cta": {
+    "book": "Nu boeken"
   },
   "footer": {
     "mark": "Bold & Digital",
-    "tagline": "Scroll-verhaal demos."
+    "tagline": "Demo Dental — Sorridere Clinic scaffold."
   },
   "locale": {
     "switcher": "Taal",

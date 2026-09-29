@@ -41,21 +41,27 @@ export function Nav() {
         <nav className="hidden items-center gap-6 sm:flex">
           <Link
             href="/"
-            className="text-sm text-muted transition-colors hover:text-foreground"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             {t("home")}
           </Link>
           <Link
-            href="/about"
-            className="text-sm text-muted transition-colors hover:text-foreground"
+            href="/services"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            {t("about")}
+            {t("services")}
           </Link>
           <Link
-            href="/contact"
-            className="text-sm text-muted transition-colors hover:text-foreground"
+            href="/team"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
-            {t("contact")}
+            {t("team")}
+          </Link>
+          <Link
+            href="/book"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {t("book")}
           </Link>
         </nav>
 
@@ -66,7 +72,7 @@ export function Nav() {
               type="button"
               aria-label={tl("switcher")}
               onClick={() => setOpen((o) => !o)}
-              className="flex items-center gap-1 rounded-md border border-border px-2 py-1 text-xs text-muted transition-colors hover:text-foreground"
+              className="flex items-center gap-1 rounded-md border border-border px-2 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground"
             >
               <span aria-hidden>🌐</span>
               <span className="uppercase">{(pathname.split("/")[1] || "en")}</span>
@@ -85,7 +91,7 @@ export function Nav() {
                       className="flex w-full items-center justify-between px-3 py-2 text-left text-sm text-foreground hover:bg-border/30"
                     >
                       <span>{tl(loc)}</span>
-                      <span className="text-xs uppercase text-muted">{loc}</span>
+                      <span className="text-xs uppercase text-muted-foreground">{loc}</span>
                     </button>
                   </li>
                 ))}
