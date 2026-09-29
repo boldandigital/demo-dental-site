@@ -38,7 +38,7 @@ export default function RootLayout({
         {/* Inline theme init — runs before paint so we don't flash on reload */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var s=localStorage.getItem('scroll-shared-theme');var d=s==='dark'||(s==null&&window.matchMedia('(prefers-color-scheme: dark)').matches);var h=document.documentElement;if(d){h.setAttribute('data-theme','dark');h.classList.add('dark');}}catch(e){}})();`,
+            __html: `(function(){try{var s=localStorage.getItem('demo-dental-site-theme');var d=s==='dark'||(s==null&&window.matchMedia('(prefers-color-scheme: dark)').matches);var h=document.documentElement;if(d){h.setAttribute('data-theme','dark');h.classList.add('dark');}}catch(e){}})();`,
           }}
         />
       </head>
